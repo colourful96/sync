@@ -271,3 +271,29 @@
 5. 计算顶点的世界坐标：顶点坐标*模型矩阵
 
 # 2024
+
+### 1-2
+
+1. github在验证git操作时已经不再接受账户密码。在sourceTree推送会失败。
+
+   在github创建个人访问令牌（经典模式）
+
+   在sourceTree中打开仓库设置，将远程URL修改为：
+
+   ```javascript
+   https://<令牌>@github.com/xxxx/sync.git
+   ```
+
+2. gl.unform3f和gl.unifrom3fv都是WebGL中用于设置3维向量类型的uniform变量的函数，区别在于他们接受参数方式不同
+
+   ```javascript
+   const location = gl.getUniformLocation(program, 'uColor');
+   gl.uniform3f(location, 1.0, 0.0, 0.0);
+   
+   const location = gl.getUniformLocation(program, 'uColor');
+   const value = [1.0, 0.0, 0.0];
+   gl.uniform3fv(location, value);
+   
+   ```
+
+3. WebGL中常见的坐标系以及区别？
