@@ -313,3 +313,10 @@
 1. WebGL调试工具。[Spector.js](https://github.com/BabylonJS/Spector.js)
 2. WebGL中立方体的每个面加载纹理图片。
 3. vuex的经典案例，用户登录，鉴权，导航守卫。
+
+### 1-7
+
+1. webpack-bundle-analyzer 代码包大小分析工具。可根据不同的环境决定是否开启，一般只在生产环境开启。
+2. 网站图标使用shortcut icon。
+3. Vue中异步组件。
+4. 使用Vue/cli脚手架创建的项目可以在浏览器使用`proecss`，是因为脚手架注入的一些代码，方便在浏览器区分环境。
