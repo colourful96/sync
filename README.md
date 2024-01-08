@@ -320,3 +320,27 @@
 2. 网站图标使用shortcut icon。
 3. Vue中异步组件。
 4. 使用Vue/cli脚手架创建的项目可以在浏览器使用`proecss`，是因为脚手架注入的一些代码，方便在浏览器区分环境。
+
+### 1-8
+
+1. 投影矩阵：定义可视空间，观察者的可视深度。
+
+2. 视图矩阵：观察者的位置。
+
+3. 模型矩阵：物体的变换（平移，缩放，旋转）。
+
+4. 模型视图投影矩阵：三者的乘积，在js中计算完传给顶点着色器。
+
+5. 旋转动画：`requestAnimationFrame()` 只是请求浏览器在适当的时机调用参数函数，所以调用函数的间隔不固定，那么每次调用时简单的加上一个固定的角度值就会导致不可控制加速或减速效果。所以需要根据前后调用时间来确定旋转角度。
+
+   ```javascript
+    let g_last = Date.now();
+   
+       function animate(angle) {
+           const now = Date.now();
+           const elapsed = now - g_last;
+           g_last = now;
+           let newAngle = angle + (angle_step * elapsed) / 1000.0;
+           return newAngle %= 360;
+       }
+   ```
