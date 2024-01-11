@@ -351,3 +351,18 @@
 2. 隐藏面消除的原理。
 3. 颜色缓冲区：用于存储渲染结果的一块内存区域。它保存了每个像素的颜色值，以便在渲染完成后将图像显示在屏幕上。
 4. 整理three.js的学习资料。
+
+### 1-10
+
+1. 材质的分类。镜面高光与漫反射高光。
+
+### 1-11
+
+1. 一台电脑需要可能需要多个不同平台的远程仓库，而且有不同的邮箱地址。如果已经设置了全局的用户名和邮箱，可通过命令删除。
+
+   ```javascript
+   git config  --global --unset user.name git config --global --unset user.email
+   // 对于非全局配置，去掉global即可
+   ```
+
+2. BufferGeometry已经替代原有的Geometry。使用 `THREE.Face3` 对象，你可以定义一个三角形面，并将其添加到 `Geometry` 对象中。然而，自 Three.js r125 版本开始，推荐使用 `BufferGeometry` 和 `BufferAttribute` 来代替 `THREE.Face3`，因为它们提供了更高效和灵活的方式来处理几何体数据。
