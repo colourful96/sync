@@ -366,3 +366,7 @@
    ```
 
 2. BufferGeometry已经替代原有的Geometry。使用 `THREE.Face3` 对象，你可以定义一个三角形面，并将其添加到 `Geometry` 对象中。然而，自 Three.js r125 版本开始，推荐使用 `BufferGeometry` 和 `BufferAttribute` 来代替 `THREE.Face3`，因为它们提供了更高效和灵活的方式来处理几何体数据。
+
+### 1-12
+
+1. 通过npm下载threejs的完整包（包含示例和附加组件）。如果需要用到附加组件需要单独引入。
