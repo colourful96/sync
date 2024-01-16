@@ -388,3 +388,31 @@
 3. 纹理和灰度纹理的区别？
 
 4. 正交投影照相机`(right - left)`与`(top - bottom)`的比值跟`canvas`宽高比例一致。
+
+### 1-16
+
+1. ant-design-vue，vue-router嵌套路由，当切换路由时`a-menu`组件是需要更换默认选中值，才能有选中状态的更改。
+
+2. ```javascript
+   let a = [];
+   const b = [1,2,{a:'a'}];
+   [,,a] = b;
+   ```
+
+3. Vue插件定义
+
+   ```javascript
+   export default {
+     install(Vue) {
+       Vue.prototype.$start = function(){ ... };
+     }
+   };
+   
+   // main.js
+   import Vue from 'vue';
+   import MyPlugin from './plugin.js';
+   Vue.use(MyPlugin);
+   ```
+
+4. `Phone`材质，`MeshPhongMaterial`在r160本本中设置点光源看不到物体，设置环境光没有镜面高光效果。需要使用r151版本。
+5. `Lambert`和`Phong`材质在r160版本中的使用没有效果解决？
