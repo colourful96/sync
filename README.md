@@ -448,3 +448,10 @@
 1. 对称加密于非对称加密区别，使用场景。
 2. 使用`MessageChannel`和`iframe`进行通信。
 3. 在notion上整理面试题。
+
+### 1-29
+
+1. three.js中的粒子系统，创建粒子流程。
+2. `Math.random()*10-5`。
+3. vue/cli脚手架提供了现代模式的命令来支持最新浏览器的生成环境的构建。`index.html`中可以使用[lodash template]([lodash template](https://lodash.com/docs/4.17.10#template))语法插入内容。
+4. 无界面（无头）浏览器。node实现pdf下载。
