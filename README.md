@@ -455,3 +455,9 @@
 2. `Math.random()*10-5`。
 3. vue/cli脚手架提供了现代模式的命令来支持最新浏览器的生成环境的构建。`index.html`中可以使用[lodash template]([lodash template](https://lodash.com/docs/4.17.10#template))语法插入内容。
 4. 无界面（无头）浏览器。node实现pdf下载。
+
+### 1-31
+
+1. `graphic`原生图形元素组件。
+2. 配置了`graphic`后使用html2canvas截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。
+3. 颜色空间。
