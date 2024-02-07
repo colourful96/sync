@@ -461,3 +461,28 @@
 1. `graphic`原生图形元素组件。
 2. 配置了`graphic`后使用html2canvas截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。
 3. 颜色空间。
+
+## 二月
+
+### 2-2
+
+1. 球坐标系。
+
+### 2-5
+
+1. ```html
+   <div id='box'>
+     <span>
+       <span>
+       	<input />
+       </span>
+     </span>
+   </div>
+   <script>
+   	const box = document.getElementById('box');
+     const input = box.querySelector('input');
+   </script>
+   ```
+
+2. 透视投影相机设置视锥体比例`(window.innerWidth / window.innerHeight) * 0.5`，相机的视锥体宽度变为高度的一半。这意味着相机会将场景中的物体在水平方向上进行更少的投影。此时看到的物体在水平方向上会变长。
+
