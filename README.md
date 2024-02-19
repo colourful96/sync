@@ -486,3 +486,34 @@
 
 2. 透视投影相机设置视锥体比例`(window.innerWidth / window.innerHeight) * 0.5`，相机的视锥体宽度变为高度的一半。这意味着相机会将场景中的物体在水平方向上进行更少的投影。此时看到的物体在水平方向上会变长。
 
+### 2-19
+
+1. `touch-action`用于设置触摸屏用户如何操纵元素的区域。
+
+2. `pointermove`使用指针设备（如鼠标、触摸屏或触控笔）移动指针时触发的事件。
+
+3. `event.isPrimary` 是指针事件对象（如 `pointerdown`、`pointermove`、`pointerup` 等）的一个属性，用于判断事件是否为主要指针事件。
+
+4. Vue中的插件，为Vue添加全局功能。
+
+5. 光源位置进行归一化操作，光照强度不会改变。
+
+6. 相机绕场景中心旋转
+
+   ```javascript
+   let theta = 0, radius = 5;  
+   render(){
+         theta += 0.1;
+         // 相机绕场景中心旋转
+         camera.position.x = radius * Math.sin( THREE.MathUtils.degToRad( theta ) );
+         camera.position.y = radius * Math.sin( THREE.MathUtils.degToRad( theta ) );
+         camera.position.z = radius * Math.cos( THREE.MathUtils.degToRad( theta ) );
+         camera.lookAt(scene.position);
+   
+         renderer.render(scene,camera);
+     
+     	requestAnimationFrame(render);
+   }
+   ```
+
+7. 通过光线投射（Raycaster）可判断鼠标指针是否移过了物体。
