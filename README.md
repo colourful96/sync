@@ -522,3 +522,13 @@
 
 1. 可对Vue组件进行封装，添加多个混合，处理公共逻辑。
 2. `JSON.parse('111')`是可以转换的。
+
+### 2-22
+
+1. 低代码平台中组件复制怎么实现？
+
+### 2-23
+
+1. vue-router中重复点击路由会报错[NavigationDuplicated Navigating to current location](https://stackoverflow.com/questions/57837758/navigationduplicated-navigating-to-current-location-search-is-not-allowed)
+2. WebGLRenderTarget用法。
+3. Int16Array
