@@ -532,3 +532,10 @@
 1. vue-router中重复点击路由会报错[NavigationDuplicated Navigating to current location](https://stackoverflow.com/questions/57837758/navigationduplicated-navigating-to-current-location-search-is-not-allowed)
 2. WebGLRenderTarget用法。
 3. Int16Array
+
+## 三月
+
+### 3-1
+
+1. node读取本地配置文件，作为一个中间代理服务器，去请求接口数据。
+2. 顶点着色器的值被传递到片元着色器时会进行一次插值计算。当使用`flat varying` 定义变量后，在传递时不会进行插值计算。
