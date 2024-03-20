@@ -553,3 +553,23 @@
 1. 绘制雪花的代码详解。
 2. `BufferGeometry`的属性`morphAttributes`用于存储顶点变形动画，实现模型的变形和动画效果。
 3. 示例代码添加注释。
+
+### 3-13
+
+1. nodejs检测端口是否被占用失败
+
+### 3-19
+
+1. `InstancedMesh`实例化网格。是一种用于实例化渲染多个相同几何体的网格的对象。它可以提高渲染性能，特别适用于需要大量重复的几何体的场景。
+
+2. ```javascript
+   const arr = [1,2,3,4,5,6];
+   arr.splice(arr.indexOf(3),1);
+   ```
+
+
+### 3-20
+
+1. 房谋杜断
+2. `new Float32Array(4 * 3)` 是 JavaScript 中创建一个包含 12 个浮点数的新的 Float32Array 数组的语法
+3. object.updateMatrix(); // 更新局部变换矩阵 object.updateMatrixWorld(); // 更新世界变换矩阵
