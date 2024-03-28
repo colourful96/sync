@@ -573,3 +573,8 @@
 1. 房谋杜断
 2. `new Float32Array(4 * 3)` 是 JavaScript 中创建一个包含 12 个浮点数的新的 Float32Array 数组的语法
 3. object.updateMatrix(); // 更新局部变换矩阵 object.updateMatrixWorld(); // 更新世界变换矩阵
+
+### 3-28
+
+1. 横向滚动时，滚动条在容器上边？
+2. jspdf生成文件后上传到后端服务器。
