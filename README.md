@@ -588,3 +588,11 @@
 3. x64  arm64。
 4. 网站上的cookie设置。
 5. macos M1芯片安装虚拟机[流程](https://zhuanlan.zhihu.com/p/452412091)。
+
+### 4-8
+
+1. picGo+github+typora搭建免费图床。
+
+### 4-10
+
+1. Vue的实力方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
