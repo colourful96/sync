@@ -596,3 +596,33 @@
 ### 4-10
 
 1. Vue的实力方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
+
+### 4-16
+
+1. ThreeJS中的局部相机。把相机添加到对象中，相机的位置和方向是相对于对象的。
+2. 通过ES6的方式的模块化在nodejs中无法运行，在`package.json`文件中添加`type:module`。
+
+### 4-17
+
+1. 无障碍——使每个人都能使用Web。文档阅读。
+2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的css文件？
+
+# lil-gui
+
+------
+
+1. 模块化，`.ejs`和`.mjs`，在`package.json`文件中添加`type:module`可以在`nodejs`中使用ES6模块化。
+
+2. 类中的`constructor`，当创建类的实例时进行初始化操作。一个类中只能有一个`constructor`，如果子类中也定义了此方法，怎需要通过`super()`方法调用父类的`constructor`。
+
+3. 无障碍，标签语义化。[WAI-ARIA](https://developer.mozilla.org/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+
+4. `textContent`表示节点文本内容，与`innerText`和`innerHTML`的[区别](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent)?
+
+5. **`CSSStyleDeclaration.setProperty()`** 方法接口为一个声明了 CSS 样式的对象设置一个新的值。
+
+6. [CSS自定义属性和变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)。`this.domElement.style.setProperty('--width', width + 'px');`：这行代码通过 JavaScript 设置了名为 `--width` 的 CSS 变量的值为 `width + 'px'`。这里的 `width` 是一个变量，它的值会以像素（'px'）作为单位，并且被赋给 `--width` 这个自定义属性。
+
+   通过这种方式，你可以在 CSS 中使用 `var(--width)` 来引用这个 CSS 变量，并在不同的地方灵活地使用这个值。这种做法使得你可以在 JavaScript 中动态地改变 CSS 变量的值，从而实现更灵活的样式控制。
+
+
