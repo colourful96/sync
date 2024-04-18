@@ -607,6 +607,12 @@
 1. 无障碍——使每个人都能使用Web。文档阅读。
 2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的css文件？
 
+### 4-18
+
+1. v -mode，双向数据绑定。
+2. ant-design-vue的form表单使用。
+3. 类的继承模式。this指向。
+
 # lil-gui
 
 ------
@@ -624,5 +630,6 @@
 6. [CSS自定义属性和变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)。`this.domElement.style.setProperty('--width', width + 'px');`：这行代码通过 JavaScript 设置了名为 `--width` 的 CSS 变量的值为 `width + 'px'`。这里的 `width` 是一个变量，它的值会以像素（'px'）作为单位，并且被赋给 `--width` 这个自定义属性。
 
    通过这种方式，你可以在 CSS 中使用 `var(--width)` 来引用这个 CSS 变量，并在不同的地方灵活地使用这个值。这种做法使得你可以在 JavaScript 中动态地改变 CSS 变量的值，从而实现更灵活的样式控制。
-
+   
+7. 类之间的继承。在子类中调用`super()`方法是用来调用父类的构造方法。
 
