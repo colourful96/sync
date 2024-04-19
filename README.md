@@ -613,6 +613,13 @@
 2. ant-design-vue的form表单使用。
 3. 类的继承模式。this指向。
 
+### 4-19
+
+1. `Element.replaceChildren()` 用于清空node后代节点或者替换后代节点。
+2. **`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个`option`元素的索引值。值为 -1 时表明没有元素被选中。
+3. `canvas` 的方法`drawImage`。
+4. `ImageLoader`实例。
+
 # lil-gui
 
 ------
@@ -632,4 +639,6 @@
    通过这种方式，你可以在 CSS 中使用 `var(--width)` 来引用这个 CSS 变量，并在不同的地方灵活地使用这个值。这种做法使得你可以在 JavaScript 中动态地改变 CSS 变量的值，从而实现更灵活的样式控制。
    
 7. 类之间的继承。在子类中调用`super()`方法是用来调用父类的构造方法。
+
+7. `Controller`类中的`_listenCallback`方法？
 
