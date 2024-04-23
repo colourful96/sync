@@ -620,6 +620,10 @@
 3. `canvas` 的方法`drawImage`。
 4. `ImageLoader`实例。
 
+### 4-23
+
+1. `webpack`设置热更新。
+
 # lil-gui
 
 ------
@@ -640,5 +644,7 @@
    
 7. 类之间的继承。在子类中调用`super()`方法是用来调用父类的构造方法。
 
-7. `Controller`类中的`_listenCallback`方法？
+8. `Controller`类中的`_listenCallback`方法？
+
+7. `gui.add()`方法会返回一个`controller`实例，每个`controller`的`onchange`方法触发都会调用`gui.onChange`的方法。
 
