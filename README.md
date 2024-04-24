@@ -624,6 +624,35 @@
 
 1. `webpack`设置热更新。
 
+### 4-24
+
+1. `webpack`[监听文件变化](https://webpack.docschina.org/configuration/watch/)，文件变化后重新编译。
+
+2. `window.matchMedia`可用于判定`document`是否匹配媒体查询？
+
+3. 媒体查询
+
+   ```css
+   @mixin touch-vars {
+   
+   	@media (pointer: coarse) {
+   		&.allow-touch-styles,
+   		&.allow-touch-styles & {
+   			@content;
+   		}
+   	}
+   
+   	&.force-touch-styles,
+   	&.force-touch-styles & {
+   		@content;
+   	}
+   }
+   ```
+
+4. 值传递和引用传递。
+
+5. Node.insertBefore()。
+
 # lil-gui
 
 ------
