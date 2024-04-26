@@ -653,6 +653,14 @@
 
 5. Node.insertBefore()。
 
+### 4-25
+
+1. [`Number`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 值的 **`toPrecision()`** 方法返回一个以指定精度表示该数字的字符串。
+
+### 4-26
+
+1. **`spellcheck`** [全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes)是一个[枚举](https://developer.mozilla.org/zh-CN/docs/Glossary/Enumerated)属性，定义是否可以检查元素的拼写错误。对于可能包含敏感信息的元素，可以设置为`false`。
+
 # lil-gui
 
 ------
@@ -675,5 +683,14 @@
 
 8. `Controller`类中的`_listenCallback`方法？
 
-7. `gui.add()`方法会返回一个`controller`实例，每个`controller`的`onchange`方法触发都会调用`gui.onChange`的方法。
+9. `gui.add()`方法会返回一个`controller`实例，每个`controller`的`onchange`方法触发都会调用`gui.onChange`的方法。
+
+10. ```javascript
+    _snap( value ) {
+    		const r = Math.round( value / this._step ) * this._step;
+    		return parseFloat( r.toPrecision( 15 ) );
+    	}
+    ```
+
+    
 
