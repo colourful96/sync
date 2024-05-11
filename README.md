@@ -661,6 +661,24 @@
 
 1. **`spellcheck`** [全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes)是一个[枚举](https://developer.mozilla.org/zh-CN/docs/Glossary/Enumerated)属性，定义是否可以检查元素的拼写错误。对于可能包含敏感信息的元素，可以设置为`false`。
 
+## 五月
+
+### 5-9
+
+1. vue中使用svg时需要做其他处理。
+2. `orientationchange`是移动设置上的事件，它在设备方向发生变化是触发。
+3. vue中组件过渡内置组件。
+
+### 5-10
+
+1. 更新rem。
+
+### 5-11
+
+1. `String.fromCharCode()`对A-Z排序。
+
+
+
 # lil-gui
 
 ------
@@ -690,6 +708,12 @@
     		const r = Math.round( value / this._step ) * this._step;
     		return parseFloat( r.toPrecision( 15 ) );
     	}
+    ```
+
+11. 监听CSS属性`traination`的变化
+
+    ```javascript
+    this.$children.addEventListener( 'transitionend', onTransitionEnd );
     ```
 
     
