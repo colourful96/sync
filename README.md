@@ -458,9 +458,9 @@
 
 ### 1-31
 
-1. `graphic`原生图形元素组件。
-2. 配置了`graphic`后使用html2canvas截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。
-3. 颜色空间。
+1. echarts中的`graphic`原生图形元素组件。
+2. 配置了`graphic`后使用html2canvas截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。需要配置图片为`base64`格式。
+3. 颜色空间。RGB(红绿蓝)、CMYK(青品黄黑)、HSL(色相饱和度亮度)
 
 ## 二月
 
@@ -494,9 +494,7 @@
 
 3. `event.isPrimary` 是指针事件对象（如 `pointerdown`、`pointermove`、`pointerup` 等）的一个属性，用于判断事件是否为主要指针事件。
 
-4. Vue中的插件，为Vue添加全局功能。
-
-5. 光源位置进行归一化操作，光照强度不会改变。
+4. [Vue中的插件](https://v2.cn.vuejs.org/v2/guide/plugins.html)，为Vue添加全局功能。
 
 6. 相机绕场景中心旋转
 
@@ -525,7 +523,7 @@
 
 ### 2-22
 
-1. 低代码平台中组件复制怎么实现？
+1. 低代码平台中组件复制怎么实现？每个组件都时json数据，数据中定义了组件的样式、属性、事件等信息，复制json数据。
 
 ### 2-23
 
@@ -554,10 +552,6 @@
 2. `BufferGeometry`的属性`morphAttributes`用于存储顶点变形动画，实现模型的变形和动画效果。
 3. 示例代码添加注释。
 
-### 3-13
-
-1. nodejs检测端口是否被占用失败
-
 ### 3-19
 
 1. `InstancedMesh`实例化网格。是一种用于实例化渲染多个相同几何体的网格的对象。它可以提高渲染性能，特别适用于需要大量重复的几何体的场景。
@@ -576,8 +570,8 @@
 
 ### 3-28
 
-1. 横向滚动时，滚动条在容器上边？
-2. jspdf生成文件后上传到后端服务器。
+1. 设置滚动条在容器上侧和左侧。[代码](https://github.com/hkp4570/daily-demo/blob/main/src/CSS%E8%AE%BE%E7%BD%AE%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%BD%8D%E7%BD%AE%E5%9C%A8%E4%B8%8A%E4%BE%A7%E5%92%8C%E5%B7%A6%E4%BE%A7/index.html)
+2. jspdf生成文件后上传到后端服务器。将pdf文件转换为blob文件，`const pdfBlob = PDF.output('blob')`
 
 ## 四月
 
@@ -595,7 +589,7 @@
 
 ### 4-10
 
-1. Vue的实力方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
+1. Vue的实例方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
 
 ### 4-16
 
@@ -676,6 +670,34 @@
 ### 5-11
 
 1. `String.fromCharCode()`对A-Z排序。
+
+### 5-13
+
+1. `figure`可附标题[内容元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)。
+
+### 5-17
+
+1. Vue自定义指令。 `Vue.component()`。
+2. 复制内容到剪切板，兼容旧版浏览器。
+
+### 5-20
+
+1. 深拷贝与浅拷贝
+
+   ```javascript
+   Object.assign()
+   扩展运算符
+   JSON.parse(JSON.stringify())
+   window.structuredClone()
+   递归
+   ```
+
+
+
+
+### 5-21
+
+1. 拖拽排序。
 
 
 
