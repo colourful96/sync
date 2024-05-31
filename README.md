@@ -580,7 +580,7 @@
 1. macos虚拟机安装。
 2. github-page页面404。
 3. x64  arm64。
-4. 网站上的cookie设置。
+4. 网站上的cookie设置。[为什么每个网站都要求你接受cookie](https://zhuanlan.zhihu.com/p/569770479)
 5. macos M1芯片安装虚拟机[流程](https://zhuanlan.zhihu.com/p/452412091)。
 
 ### 4-8
@@ -591,6 +591,8 @@
 
 1. Vue的实例方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
 
+   [使用场景](https://blog.csdn.net/zhouzuoluo/article/details/84752280)
+
 ### 4-16
 
 1. ThreeJS中的局部相机。把相机添加到对象中，相机的位置和方向是相对于对象的。
@@ -599,7 +601,7 @@
 ### 4-17
 
 1. 无障碍——使每个人都能使用Web。文档阅读。
-2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的css文件？
+2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的css文件？需要在入口文件中引入样式文件。
 
 ### 4-18
 
@@ -612,7 +614,7 @@
 1. `Element.replaceChildren()` 用于清空node后代节点或者替换后代节点。
 2. **`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个`option`元素的索引值。值为 -1 时表明没有元素被选中。
 3. `canvas` 的方法`drawImage`。
-4. `ImageLoader`实例。
+4. threejs中的`ImageLoader`实例。
 
 ### 4-23
 
@@ -698,6 +700,24 @@
 ### 5-21
 
 1. 拖拽排序。
+
+### 5-24
+
+1. jspdf下载PDF，转换文件时，svg图表转换为图片。否则图表数据丢失。
+
+### 5-27
+
+1. URL.createObjectURL()。
+2. p元素内不允许再包含p元素；语义结构，可访问性，样式和布局，标准规范。
+3. echarts中图表加载时animationDelay设置入场动画。
+
+### 5-30
+
+1. **`<hgroup>`** [HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`–`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素与一个或多个 [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p) 元素组合在一起。
+
+### 5-31
+
+1. vue@2.6版本和webpack5会有兼容性问题，导致一些nodejs模块不会在自动polyfill。
 
 
 
