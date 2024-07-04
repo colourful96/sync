@@ -2,14 +2,14 @@
 
 ### 11-24
 
-1. 使用node的http模块启动一个服务（不使用express），使用cors解决跨域
+1. 使用 node 的 http 模块启动一个服务（不使用 express），使用 cors 解决跨域
 
    ```
    const server = http.createServer((req, res) => {
        handleReq(req);
        res.setHeader('Access-Control-Allow-Origin', 'xxx')
        res.setHeader('Access-Control-Allow-Credentials', true)
-   
+
        res.statusCode = 200;
        res.write("你好！");
        res.end();
@@ -18,16 +18,16 @@
 
 2. 常见的地图服务（WMS/WFS/WCS/TMS/WMTS）
 
-3. 3D Tiles简介 [简介](https://gitee.com/link?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F389652357)
+3. 3D Tiles 简介 [简介](https://gitee.com/link?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F389652357)
 
 ### 11-27
 
-1. fiber节点，fiberTree的深度优先遍历
+1. fiber 节点，fiberTree 的深度优先遍历
 
 ### 11-28
 
-1. POI是Point of Interest的缩写，是指兴趣点。每个POI至少包含以下4项基本信息：名称（Name）、类别（Type）、经度（longitude）、纬度（latitude），所以poiName指的是兴趣点名称，它可以是一栋房子、一个商铺、一个公厕或一个公交站等。
-2. AOI是Area of interest的缩写，代指兴趣面。AOI同样包含4项基本信息：名称（Name）、类别（Type）、经度（longitude）、纬度（latitude），指的是地图数据中的区域状的地理实体。
+1. POI 是 Point of Interest 的缩写，是指兴趣点。每个 POI 至少包含以下 4 项基本信息：名称（Name）、类别（Type）、经度（longitude）、纬度（latitude），所以 poiName 指的是兴趣点名称，它可以是一栋房子、一个商铺、一个公厕或一个公交站等。
+2. AOI 是 Area of interest 的缩写，代指兴趣面。AOI 同样包含 4 项基本信息：名称（Name）、类别（Type）、经度（longitude）、纬度（latitude），指的是地图数据中的区域状的地理实体。
 
 ### 11-29
 
@@ -53,7 +53,7 @@
 
 ### 12-04
 
-1. 使用express获取不到post请求的参数，可能需要中间件来解析请求参数
+1. 使用 express 获取不到 post 请求的参数，可能需要中间件来解析请求参数
 
    ```javascript
    app.use(express.json()); // 解析 JSON 请求体
@@ -73,16 +73,16 @@
 
    ```javascript
    import React, { memo } from 'react';
-   
+
    function MyComponent(props) {
      // ...
    }
-   
+
    function areEqual(prevProps, nextProps) {
      // 自定义比较逻辑，判断 props 是否相等
      return prevProps.name === nextProps.name;
    }
-   
+
    export default memo(MyComponent, areEqual);
    ```
 
@@ -108,11 +108,11 @@
 
 ### 12-11
 
-1. echarts中折线图自定义拐点样式
+1. echarts 中折线图自定义拐点样式
 
 ### 12-13
 
-1. svg中`path`绘制弧线，设置第三个参数旋转角度不生效
+1. svg 中`path`绘制弧线，设置第三个参数旋转角度不生效
 
 2. 网页中嵌入其他内容`<iframe>`,`<object>`,`<embed>`
 
@@ -143,7 +143,7 @@
 
 ### 12-15
 
-1. 页面中引入canvas元素，当鼠标点击canvas元素时，获取到鼠标点击的位置转换成WebGL坐标
+1. 页面中引入 canvas 元素，当鼠标点击 canvas 元素时，获取到鼠标点击的位置转换成 WebGL 坐标
 
    ```javascript
    const canvas = document.getElementById('canvas');
@@ -156,7 +156,7 @@
 
 ### 12-18
 
-**在WebGL中创建着色器（shader）的流程**
+**在 WebGL 中创建着色器（shader）的流程**
 
 1. 创建着色器对象： 使用 WebGL 上下文的 `createShader` 方法创建一个着色器对象。着色器对象有两种类型：顶点着色器（`gl.VERTEX_SHADER`）和片元着色器（`gl.FRAGMENT_SHADER`）。
 2. 编译着色器源代码： 使用 `shaderSource` 方法将着色器源代码分配给着色器对象。源代码是一个包含 GLSL（OpenGL Shading Language）代码的字符串。
@@ -170,7 +170,7 @@
 
 ### 12-19
 
-1. Ant Design Vue使用Table组件需要设置key。
+1. Ant Design Vue 使用 Table 组件需要设置 key。
 
    ```javascript
    // 在数据中设置key值
@@ -186,16 +186,16 @@
    // 设置rowKey属性
    <a-table :data-source="dataSource" rowKey="id">
      <!-- 表格列配置 -->
-   </a-table>  
+   </a-table>
    ```
 
-2. Ant Design Vue使用带有插槽的组件时，会提示`slot`和`slot-scope`已经过期。以下时替代写法，`Table`组件为例
+2. Ant Design Vue 使用带有插槽的组件时，会提示`slot`和`slot-scope`已经过期。以下时替代写法，`Table`组件为例
 
    ```javascript
    // 已过时
    <template v-slot='operation' slot-scope='text, record'>
    </template>
-   
+
    <template #operation="text, record" >
    </template>
    const columns = [
@@ -216,15 +216,15 @@
 ### 12-20
 
 1. 谷歌浏览器设置允许访问本地文件的方式。
-2. 可浏览器中的接口请求复制（copy as cURL）,在apifox中导入，可以将整个接口请求（header,cookie）等信息全部复制。
+2. 可浏览器中的接口请求复制（copy as cURL）,在 apifox 中导入，可以将整个接口请求（header,cookie）等信息全部复制。
 
 ### 12-21
 
-1. WebGL课程纹理。
+1. WebGL 课程纹理。
 
 ### 12-25
 
-1. vue当中事件修饰符。
+1. vue 当中事件修饰符。
 
 2. 正射投影与透视投影的区别。
 
@@ -242,11 +242,11 @@
 
 1. 类型化数组
 
-   > 1. Int8Array、Uint8Array、Uint8ClampedArray：用于处理8位整数（有符号、无符号、固定范围）。
-   > 2. Int16Array、Uint16Array：用于处理16位整数（有符号、无符号）。
-   > 3. Int32Array、Uint32Array：用于处理32位整数（有符号、无符号）。
-   > 4. Float32Array：用于处理32位浮点数。
-   > 5. Float64Array：用于处理64位浮点数。
+   > 1. Int8Array、Uint8Array、Uint8ClampedArray：用于处理 8 位整数（有符号、无符号、固定范围）。
+   > 2. Int16Array、Uint16Array：用于处理 16 位整数（有符号、无符号）。
+   > 3. Int32Array、Uint32Array：用于处理 32 位整数（有符号、无符号）。
+   > 4. Float32Array：用于处理 32 位浮点数。
+   > 5. Float64Array：用于处理 64 位浮点数。
 
 ### 12-29
 
@@ -262,13 +262,13 @@
    >
    > 在计算机图形学中，法线还可以用于其他操作，例如投影、纹理映射、碰撞检测等。在处理复杂的三维模型时，准确计算和使用正确的法线是实现真实感渲染和模拟物理行为的关键。
 
-2. 点积运算，归一化运算，GLSL ES语言已经内置。
+2. 点积运算，归一化运算，GLSL ES 语言已经内置。
 
-3. webgl中光线的方式为什么使用世界坐标系？世界坐标系与局部坐标系。
+3. webgl 中光线的方式为什么使用世界坐标系？世界坐标系与局部坐标系。
 
-4. gl.uniform3f 和 gl.uniform3fv用法
+4. gl.uniform3f 和 gl.uniform3fv 用法
 
-5. 计算顶点的世界坐标：顶点坐标*模型矩阵
+5. 计算顶点的世界坐标：顶点坐标\*模型矩阵
 
 # 2024
 
@@ -276,29 +276,29 @@
 
 ### 1-2
 
-1. github在验证git操作时已经不再接受账户密码。在sourceTree推送会失败。
+1. github 在验证 git 操作时已经不再接受账户密码。在 sourceTree 推送会失败。
 
-   在github创建个人访问令牌（经典模式）
+   在 github 创建个人访问令牌（经典模式）
 
-   在sourceTree中打开仓库设置，将远程URL修改为：
+   在 sourceTree 中打开仓库设置，将远程 URL 修改为：
 
    ```javascript
    https://<令牌>@github.com/xxxx/sync.git
    ```
 
-2. gl.unform3f和gl.unifrom3fv都是WebGL中用于设置3维向量类型的uniform变量的函数，区别在于他们接受参数方式不同
+2. gl.unform3f 和 gl.unifrom3fv 都是 WebGL 中用于设置 3 维向量类型的 uniform 变量的函数，区别在于他们接受参数方式不同
 
    ```javascript
    const location = gl.getUniformLocation(program, 'uColor');
    gl.uniform3f(location, 1.0, 0.0, 0.0);
-   
+
    const location = gl.getUniformLocation(program, 'uColor');
    const value = [1.0, 0.0, 0.0];
    gl.uniform3fv(location, value);
-   
+
    ```
 
-3. WebGL中常见的坐标系以及区别？
+3. WebGL 中常见的坐标系以及区别？
 
 ### 1-3
 
@@ -306,22 +306,22 @@
 
 ### 1-4
 
-1. 一台电脑上可能会同时使用多个不同平台的仓库（github, gitee, 企业内部等）。在git配置时，为每个项目单独设置用户名和邮箱。不使用全局配置。
+1. 一台电脑上可能会同时使用多个不同平台的仓库（github, gitee, 企业内部等）。在 git 配置时，为每个项目单独设置用户名和邮箱。不使用全局配置。
 2. 漫游式引导，用户第一次访问时会有一个引导提示功能。
-3. `precision mediump float;`语句用于指定浮点数的精度。它告诉着色器使用中等精度的浮点数来表示和计算浮点数值。以在保持较好图像质量的同时，减少对GPU资源的需求。语句只适用于片元着色器中的浮点数类型（如`float`、`vec2`、`vec3`等）。对于其他类型（如整数类型、布尔类型等），并不受该语句的影响。
+3. `precision mediump float;`语句用于指定浮点数的精度。它告诉着色器使用中等精度的浮点数来表示和计算浮点数值。以在保持较好图像质量的同时，减少对 GPU 资源的需求。语句只适用于片元着色器中的浮点数类型（如`float`、`vec2`、`vec3`等）。对于其他类型（如整数类型、布尔类型等），并不受该语句的影响。
 
 ### 1-5
 
-1. WebGL调试工具。[Spector.js](https://github.com/BabylonJS/Spector.js)
-2. WebGL中立方体的每个面加载纹理图片。
-3. vuex的经典案例，用户登录，鉴权，导航守卫。
+1. WebGL 调试工具。[Spector.js](https://github.com/BabylonJS/Spector.js)
+2. WebGL 中立方体的每个面加载纹理图片。
+3. vuex 的经典案例，用户登录，鉴权，导航守卫。
 
 ### 1-7
 
 1. webpack-bundle-analyzer 代码包大小分析工具。可根据不同的环境决定是否开启，一般只在生产环境开启。
-2. 网站图标使用shortcut icon。
-3. Vue中异步组件。
-4. 使用Vue/cli脚手架创建的项目可以在浏览器使用`proecss`，是因为脚手架注入的一些代码，方便在浏览器区分环境。
+2. 网站图标使用 shortcut icon。
+3. Vue 中异步组件。
+4. 使用 Vue/cli 脚手架创建的项目可以在浏览器使用`proecss`，是因为脚手架注入的一些代码，方便在浏览器区分环境。
 
 ### 1-8
 
@@ -331,30 +331,28 @@
 
 3. 模型矩阵：物体的变换（平移，缩放，旋转）。
 
-4. 模型视图投影矩阵：三者的乘积，在js中计算完传给顶点着色器。
+4. 模型视图投影矩阵：三者的乘积，在 js 中计算完传给顶点着色器。
 
    1. 旋转动画：`requestAnimationFrame()` 只是请求浏览器在适当的时机调用参数函数，所以调用函数的间隔不固定，那么每次调用时简单的加上一个固定的角度值就会导致不可控制加速或减速效果。所以需要根据前后调用时间来确定旋转角度。
 
+```javascript
+ let g_last = Date.now();
 
-   ```javascript
-    let g_last = Date.now();
-   
-       function animate(angle) {
-           const now = Date.now();
-           const elapsed = now - g_last;
-           g_last = now;
-           let newAngle = angle + (angle_step * elapsed) / 1000.0;
-           return newAngle %= 360;
-       }
-   ```
-
+    function animate(angle) {
+        const now = Date.now();
+        const elapsed = now - g_last;
+        g_last = now;
+        let newAngle = angle + (angle_step * elapsed) / 1000.0;
+        return newAngle %= 360;
+    }
+```
 
 ### 1-9
 
 1. 绘制出立方体，给立方体每个表面设置编号，点击立方体表面获取编号时有时获取到错误编号。
 2. 隐藏面消除的原理。
 3. 颜色缓冲区：用于存储渲染结果的一块内存区域。它保存了每个像素的颜色值，以便在渲染完成后将图像显示在屏幕上。
-4. 整理three.js的学习资料。
+4. 整理 three.js 的学习资料。
 
 ### 1-10
 
@@ -369,21 +367,21 @@
    // 对于非全局配置，去掉global即可
    ```
 
-2. BufferGeometry已经替代原有的Geometry。使用 `THREE.Face3` 对象，你可以定义一个三角形面，并将其添加到 `Geometry` 对象中。然而，自 Three.js r125 版本开始，推荐使用 `BufferGeometry` 和 `BufferAttribute` 来代替 `THREE.Face3`，因为它们提供了更高效和灵活的方式来处理几何体数据。
+2. BufferGeometry 已经替代原有的 Geometry。使用 `THREE.Face3` 对象，你可以定义一个三角形面，并将其添加到 `Geometry` 对象中。然而，自 Three.js r125 版本开始，推荐使用 `BufferGeometry` 和 `BufferAttribute` 来代替 `THREE.Face3`，因为它们提供了更高效和灵活的方式来处理几何体数据。
 
 ### 1-12
 
-1. 通过npm下载threejs的完整包（包含示例和附加组件）。如果需要用到附加组件需要单独引入。
+1. 通过 npm 下载 threejs 的完整包（包含示例和附加组件）。如果需要用到附加组件需要单独引入。
 
 ### 1-15
 
-1. 在计算机图形学和Three.js中，Lambert材质是一种基础的光照模型，它模拟了漫反射（Diffuse Reflection）现象。漫反射是指光线照射到物体表面时，光线会以各种方向均匀散射的现象，其亮度与光源入射角无关。
+1. 在计算机图形学和 Three.js 中，Lambert 材质是一种基础的光照模型，它模拟了漫反射（Diffuse Reflection）现象。漫反射是指光线照射到物体表面时，光线会以各种方向均匀散射的现象，其亮度与光源入射角无关。
 
-2. `THREE.MeshLambertMaterial`材质在r160版本中设置自发光生效，设置点光源并没有效果，需要使用r151版本。
+2. `THREE.MeshLambertMaterial`材质在 r160 版本中设置自发光生效，设置点光源并没有效果，需要使用 r151 版本。
 
-   在Three.js中，`THREE.MeshLambertMaterial` 类代表了 Lambert 材质，它的特点是：
+   在 Three.js 中，`THREE.MeshLambertMaterial` 类代表了 Lambert 材质，它的特点是：
 
-   1. **漫反射光照**：Lambert材质只考虑环境光和光源的漫反射部分，不考虑镜面高光效果。
+   1. **漫反射光照**：Lambert 材质只考虑环境光和光源的漫反射部分，不考虑镜面高光效果。
    2. **颜色计算**：根据光源的颜色、强度以及表面法线与光源方向的角度来计算物体表面的颜色。当表面法线与光源方向越接近平行时，表面接收的光照越强；反之则越弱。
    3. **自发光**：可以设置一个自发光颜色，即使没有外部光源，对象也会发出一定的亮度。
 
@@ -393,7 +391,7 @@
 
 ### 1-16
 
-1. ant-design-vue，vue-router嵌套路由，当切换路由时`a-menu`组件是需要更换默认选中值，才能有选中状态的更改。
+1. ant-design-vue，vue-router 嵌套路由，当切换路由时`a-menu`组件是需要更换默认选中值，才能有选中状态的更改。
 
 2. ```javascript
    let a = [];
@@ -401,7 +399,7 @@
    [,,a] = b;
    ```
 
-3. Vue插件定义
+3. Vue 插件定义
 
    ```javascript
    export default {
@@ -409,57 +407,57 @@
        Vue.prototype.$start = function(){ ... };
      }
    };
-   
+
    // main.js
    import Vue from 'vue';
    import MyPlugin from './plugin.js';
    Vue.use(MyPlugin);
    ```
 
-4. `Phone`材质，`MeshPhongMaterial`在r160本本中设置点光源看不到物体，设置环境光没有镜面高光效果。需要使用r151版本。
-5. `Lambert`和`Phong`材质在r160版本中的使用没有效果解决？
+4. `Phone`材质，`MeshPhongMaterial`在 r160 本本中设置点光源看不到物体，设置环境光没有镜面高光效果。需要使用 r151 版本。
+5. `Lambert`和`Phong`材质在 r160 版本中的使用没有效果解决？
 
 ### 1-17
 
-1. 在WebGL和原生js中使用`requestAnimationFrame`实现旋转动画，每次增加固定的角度值，在WebGL中转速越来越快，而在原生js中却是匀速旋转。
-2. notion中新建一个记录包的页面。
+1. 在 WebGL 和原生 js 中使用`requestAnimationFrame`实现旋转动画，每次增加固定的角度值，在 WebGL 中转速越来越快，而在原生 js 中却是匀速旋转。
+2. notion 中新建一个记录包的页面。
 3. 法线材质调试场景使用。
 4. [纹理贴图](https://threejs.org/docs/index.html?q=tex#api/zh/textures/Texture)的各个属性。
 
 ### 1-22
 
-1. A instances B A的原型链上是否有B的原型。
+1. A instances B A 的原型链上是否有 B 的原型。
 
 ### 1-23
 
-1. vuex中怎么实现类似于`yield all()`的效果，同时发送多个请求。
-2. 材质的ambient属性定义了材质对环境光照的响应颜色。当一个场景中有环境光时，环境光会均匀地影响场景中的所有物体，而物体材质的ambient属性决定了它如何吸收和反映这种环境光照。如果你设置了材质的ambient属性并且场景中存在环境光，那么物体的实际颜色将是材质的ambient属性值与环境光颜色的乘积。
+1. vuex 中怎么实现类似于`yield all()`的效果，同时发送多个请求。
+2. 材质的 ambient 属性定义了材质对环境光照的响应颜色。当一个场景中有环境光时，环境光会均匀地影响场景中的所有物体，而物体材质的 ambient 属性决定了它如何吸收和反映这种环境光照。如果你设置了材质的 ambient 属性并且场景中存在环境光，那么物体的实际颜色将是材质的 ambient 属性值与环境光颜色的乘积。
 3. 渲染流水线
 
 ### 1-24
 
-1. ThreeJS中的UV映射。UV 映射是一种将纹理坐标映射到几何体表面的过程。UV 坐标是二维坐标系，用于确定纹理在几何体表面上的位置。UV 映射允许将纹理图像贴附到几何体上，使其具有细节、颜色和纹理。
+1. ThreeJS 中的 UV 映射。UV 映射是一种将纹理坐标映射到几何体表面的过程。UV 坐标是二维坐标系，用于确定纹理在几何体表面上的位置。UV 映射允许将纹理图像贴附到几何体上，使其具有细节、颜色和纹理。
 2. 着色器可以写在单独的文件中，也可以写在`script`标签中。
 3. `THREE.AxisHelper()` 方法用于创建一个辅助对象，用于可视化坐标轴。
-4. data.gui创建简单的界面组件。
+4. data.gui 创建简单的界面组件。
 
 ### 1-26
 
 1. 对称加密于非对称加密区别，使用场景。
 2. 使用`MessageChannel`和`iframe`进行通信。
-3. 在notion上整理面试题。
+3. 在 notion 上整理面试题。
 
 ### 1-29
 
-1. three.js中的粒子系统，创建粒子流程。
+1. three.js 中的粒子系统，创建粒子流程。
 2. `Math.random()*10-5`。
-3. vue/cli脚手架提供了现代模式的命令来支持最新浏览器的生成环境的构建。`index.html`中可以使用[lodash template]([lodash template](https://lodash.com/docs/4.17.10#template))语法插入内容。
-4. 无界面（无头）浏览器。node实现pdf下载。
+3. vue/cli 脚手架提供了现代模式的命令来支持最新浏览器的生成环境的构建。`index.html`中可以使用[lodash template]([lodash template](https://lodash.com/docs/4.17.10#template))语法插入内容。
+4. 无界面（无头）浏览器。node 实现 pdf 下载。
 
 ### 1-31
 
-1. echarts中的`graphic`原生图形元素组件。
-2. 配置了`graphic`后使用html2canvas截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。需要配置图片为`base64`格式。
+1. echarts 中的`graphic`原生图形元素组件。
+2. 配置了`graphic`后使用 html2canvas 截图时，设置允许跨域，还是报错画布被污染，无法转换为图片。需要配置图片为`base64`格式。
 3. 颜色空间。RGB(红绿蓝)、CMYK(青品黄黑)、HSL(色相饱和度亮度)
 
 ## 二月
@@ -494,12 +492,12 @@
 
 3. `event.isPrimary` 是指针事件对象（如 `pointerdown`、`pointermove`、`pointerup` 等）的一个属性，用于判断事件是否为主要指针事件。
 
-4. [Vue中的插件](https://v2.cn.vuejs.org/v2/guide/plugins.html)，为Vue添加全局功能。
+4. [Vue 中的插件](https://v2.cn.vuejs.org/v2/guide/plugins.html)，为 Vue 添加全局功能。
 
-6. 相机绕场景中心旋转
+5. 相机绕场景中心旋转
 
    ```javascript
-   let theta = 0, radius = 5;  
+   let theta = 0, radius = 5;
    render(){
          theta += 0.1;
          // 相机绕场景中心旋转
@@ -507,35 +505,35 @@
          camera.position.y = radius * Math.sin( THREE.MathUtils.degToRad( theta ) );
          camera.position.z = radius * Math.cos( THREE.MathUtils.degToRad( theta ) );
          camera.lookAt(scene.position);
-   
+
          renderer.render(scene,camera);
-     
+
      	requestAnimationFrame(render);
    }
    ```
 
-7. 通过光线投射（Raycaster）可判断鼠标指针是否移过了物体。
+6. 通过光线投射（Raycaster）可判断鼠标指针是否移过了物体。
 
 ### 2-20
 
-1. 可对Vue组件进行封装，添加多个混合，处理公共逻辑。
+1. 可对 Vue 组件进行封装，添加多个混合，处理公共逻辑。
 2. `JSON.parse('111')`是可以转换的。
 
 ### 2-22
 
-1. 低代码平台中组件复制怎么实现？每个组件都时json数据，数据中定义了组件的样式、属性、事件等信息，复制json数据。
+1. 低代码平台中组件复制怎么实现？每个组件都时 json 数据，数据中定义了组件的样式、属性、事件等信息，复制 json 数据。
 
 ### 2-23
 
-1. vue-router中重复点击路由会报错[NavigationDuplicated Navigating to current location](https://stackoverflow.com/questions/57837758/navigationduplicated-navigating-to-current-location-search-is-not-allowed)
-2. WebGLRenderTarget用法。
+1. vue-router 中重复点击路由会报错[NavigationDuplicated Navigating to current location](https://stackoverflow.com/questions/57837758/navigationduplicated-navigating-to-current-location-search-is-not-allowed)
+2. WebGLRenderTarget 用法。
 3. Int16Array
 
 ## 三月
 
 ### 3-1
 
-1. node读取本地配置文件，作为一个中间代理服务器，去请求接口数据。
+1. node 读取本地配置文件，作为一个中间代理服务器，去请求接口数据。
 2. 顶点着色器的值被传递到片元着色器时会进行一次插值计算。当使用`flat varying` 定义变量后，在传递时不会进行插值计算。
 
 ### 3-3
@@ -561,7 +559,6 @@
    arr.splice(arr.indexOf(3),1);
    ```
 
-
 ### 3-20
 
 1. 房谋杜断
@@ -571,50 +568,50 @@
 ### 3-28
 
 1. 设置滚动条在容器上侧和左侧。[代码](https://github.com/hkp4570/daily-demo/blob/main/src/CSS%E8%AE%BE%E7%BD%AE%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%BD%8D%E7%BD%AE%E5%9C%A8%E4%B8%8A%E4%BE%A7%E5%92%8C%E5%B7%A6%E4%BE%A7/index.html)
-2. jspdf生成文件后上传到后端服务器。将pdf文件转换为blob文件，`const pdfBlob = PDF.output('blob')`
+2. jspdf 生成文件后上传到后端服务器。将 pdf 文件转换为 blob 文件，`const pdfBlob = PDF.output('blob')`
 
 ## 四月
 
 ### 4-7
 
-1. macos虚拟机安装。
-2. github-page页面404。
-3. x64  arm64。
-4. 网站上的cookie设置。[为什么每个网站都要求你接受cookie](https://zhuanlan.zhihu.com/p/569770479)
-5. macos M1芯片安装虚拟机[流程](https://zhuanlan.zhihu.com/p/452412091)。
+1. macos 虚拟机安装。
+2. github-page 页面 404。
+3. x64 arm64。
+4. 网站上的 cookie 设置。[为什么每个网站都要求你接受 cookie](https://zhuanlan.zhihu.com/p/569770479)
+5. macos M1 芯片安装虚拟机[流程](https://zhuanlan.zhihu.com/p/452412091)。
 
 ### 4-8
 
-1. picGo+github+typora搭建免费图床。
+1. picGo+github+typora 搭建免费图床。
 
 ### 4-10
 
-1. Vue的实例方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次DOM更新循环之后执行。
+1. Vue 的实例方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次 DOM 更新循环之后执行。
 
    [使用场景](https://blog.csdn.net/zhouzuoluo/article/details/84752280)
 
 ### 4-16
 
-1. ThreeJS中的局部相机。把相机添加到对象中，相机的位置和方向是相对于对象的。
-2. 通过ES6的方式的模块化在nodejs中无法运行，在`package.json`文件中添加`type:module`。
+1. ThreeJS 中的局部相机。把相机添加到对象中，相机的位置和方向是相对于对象的。
+2. 通过 ES6 的方式的模块化在 nodejs 中无法运行，在`package.json`文件中添加`type:module`。
 
 ### 4-17
 
-1. 无障碍——使每个人都能使用Web。文档阅读。
-2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的css文件？需要在入口文件中引入样式文件。
+1. 无障碍——使每个人都能使用 Web。文档阅读。
+2. 使用`webpack`构建项目。如果是一个模块化项目，则需要使用相关配置。怎么打包没有引用的 css 文件？需要在入口文件中引入样式文件。
 
 ### 4-18
 
 1. v -mode，双向数据绑定。
-2. ant-design-vue的form表单使用。
-3. 类的继承模式。this指向。
+2. ant-design-vue 的 form 表单使用。
+3. 类的继承模式。this 指向。
 
 ### 4-19
 
-1. `Element.replaceChildren()` 用于清空node后代节点或者替换后代节点。
+1. `Element.replaceChildren()` 用于清空 node 后代节点或者替换后代节点。
 2. **`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个`option`元素的索引值。值为 -1 时表明没有元素被选中。
 3. `canvas` 的方法`drawImage`。
-4. threejs中的`ImageLoader`实例。
+4. threejs 中的`ImageLoader`实例。
 
 ### 4-23
 
@@ -630,14 +627,14 @@
 
    ```css
    @mixin touch-vars {
-   
+
    	@media (pointer: coarse) {
    		&.allow-touch-styles,
    		&.allow-touch-styles & {
    			@content;
    		}
    	}
-   
+
    	&.force-touch-styles,
    	&.force-touch-styles & {
    		@content;
@@ -661,17 +658,17 @@
 
 ### 5-9
 
-1. vue中使用svg时需要做其他处理。
+1. vue 中使用 svg 时需要做其他处理。
 2. `orientationchange`是移动设置上的事件，它在设备方向发生变化是触发。
-3. vue中组件过渡内置组件。
+3. vue 中组件过渡内置组件。
 
 ### 5-10
 
-1. 更新rem。
+1. 更新 rem。
 
 ### 5-11
 
-1. `String.fromCharCode()`对A-Z排序。
+1. `String.fromCharCode()`对 A-Z 排序。
 
 ### 5-13
 
@@ -679,7 +676,7 @@
 
 ### 5-17
 
-1. Vue自定义指令。 `Vue.component()`。
+1. Vue 自定义指令。 `Vue.component()`。
 2. 复制内容到剪切板，兼容旧版浏览器。
 
 ### 5-20
@@ -694,22 +691,19 @@
    递归
    ```
 
-
-
-
 ### 5-21
 
 1. 拖拽排序。
 
 ### 5-24
 
-1. jspdf下载PDF，转换文件时，svg图表转换为图片。否则图表数据丢失。
+1. jspdf 下载 PDF，转换文件时，svg 图表转换为图片。否则图表数据丢失。
 
 ### 5-27
 
 1. URL.createObjectURL()。
-2. p元素内不允许再包含p元素；语义结构，可访问性，样式和布局，标准规范。
-3. echarts中图表加载时animationDelay设置入场动画。
+2. p 元素内不允许再包含 p 元素；语义结构，可访问性，样式和布局，标准规范。
+3. echarts 中图表加载时 animationDelay 设置入场动画。
 
 ### 5-30
 
@@ -717,15 +711,24 @@
 
 ### 5-31
 
-1. vue@2.6版本和webpack5会有兼容性问题，导致一些nodejs模块不会在自动polyfill。
+1. vue@2.6 版本和 webpack5 会有兼容性问题，导致一些 nodejs 模块不会在自动 polyfill。
 
+## 七月
 
+### 7-4
+
+1. `process.args`命令行参数。`yargs-parse`包可用来格式化命令行参数。
+2. `package.json`中安装的包版本控制。符号代表什么？
+3. [前端路由](https://juejin.cn/post/6844903890278694919)
+4. `<script>`标签中写`async defer`的区别？
+5. recoil文档。
+6. `nodejs`中的`event`事件。
 
 # lil-gui
 
-------
+---
 
-1. 模块化，`.ejs`和`.mjs`，在`package.json`文件中添加`type:module`可以在`nodejs`中使用ES6模块化。
+1. 模块化，`.ejs`和`.mjs`，在`package.json`文件中添加`type:module`可以在`nodejs`中使用 ES6 模块化。
 
 2. 类中的`constructor`，当创建类的实例时进行初始化操作。一个类中只能有一个`constructor`，如果子类中也定义了此方法，怎需要通过`super()`方法调用父类的`constructor`。
 
@@ -735,10 +738,10 @@
 
 5. **`CSSStyleDeclaration.setProperty()`** 方法接口为一个声明了 CSS 样式的对象设置一个新的值。
 
-6. [CSS自定义属性和变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)。`this.domElement.style.setProperty('--width', width + 'px');`：这行代码通过 JavaScript 设置了名为 `--width` 的 CSS 变量的值为 `width + 'px'`。这里的 `width` 是一个变量，它的值会以像素（'px'）作为单位，并且被赋给 `--width` 这个自定义属性。
+6. [CSS 自定义属性和变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)。`this.domElement.style.setProperty('--width', width + 'px');`：这行代码通过 JavaScript 设置了名为 `--width` 的 CSS 变量的值为 `width + 'px'`。这里的 `width` 是一个变量，它的值会以像素（'px'）作为单位，并且被赋给 `--width` 这个自定义属性。
 
    通过这种方式，你可以在 CSS 中使用 `var(--width)` 来引用这个 CSS 变量，并在不同的地方灵活地使用这个值。这种做法使得你可以在 JavaScript 中动态地改变 CSS 变量的值，从而实现更灵活的样式控制。
-   
+
 7. 类之间的继承。在子类中调用`super()`方法是用来调用父类的构造方法。
 
 8. `Controller`类中的`_listenCallback`方法？
@@ -752,11 +755,8 @@
     	}
     ```
 
-11. 监听CSS属性`traination`的变化
+11. 监听 CSS 属性`traination`的变化
 
     ```javascript
     this.$children.addEventListener( 'transitionend', onTransitionEnd );
     ```
-
-    
-
