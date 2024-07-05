@@ -724,6 +724,24 @@
 5. recoil文档。
 6. `nodejs`中的`event`事件。
 
+### 7-5
+
+1. `umijs`中配置全局样式，不必要在每个样式文件中引入全局的样式表（变量和公共样式）。
+
+2. `typescript`中`type` 和`interface`的区别？
+
+3. `React.ReactNode` `JSX.Element`的区别？
+
+4. `antd`中自定义`font`图标。
+
+   ```javascript
+   import { createFromIconfontCN } from '@ant-design/icons';
+   ```
+
+5. `umi-request`源码。
+
+   
+
 # lil-gui
 
 ---
