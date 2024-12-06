@@ -762,7 +762,18 @@
 
 1. `<script type='importmap'></script>`用于定义模块导入映射。
 
+## 十二月
 
+### 12-5
+
+1. 接口并发处理。
+2. p-all p-queue。
+
+### 12-6
+
+1. 接口取消请求。
+2. FileReader。
+3. uni-request 配合AbortController取消请求。
 
 # lil-gui
 
