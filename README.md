@@ -775,6 +775,19 @@
 2. FileReader。
 3. uni-request 配合AbortController取消请求。
 
+### 12-9
+
+1. npm install --legacy-peer-deps  安装包时版本有冲突。
+
+### 12-26
+
+1. 默认行为（仅src属性）：同步加载，阻塞HTML解析，按顺序执行。async属性：异步加载，不阻塞HTML解析，执行顺序不确定。defer属性：异步加载，不阻塞HTML解析，按顺序执行，且在HTML解析完成后执行。
+2. console.log()不同格式的输出，以及格式化带样式输出。[文档](https://developer.mozilla.org/zh-CN/docs/Web/API/console)
+3. declare。
+4. 在子类的构造函数中，必须在使用 `this` 之前调用 `super()`，否则将会导致运行时错误。
+5. ReactDOM.findDOMNode()。
+6. excels。将图片放到表格中，配合html2canvas截图工具。
+
 # lil-gui
 
 ---
