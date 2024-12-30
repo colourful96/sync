@@ -788,6 +788,13 @@
 5. ReactDOM.findDOMNode()。
 6. excels。将图片放到表格中，配合html2canvas截图工具。
 
+### 12-30
+
+1. 普通对象和通过构造函数构造的对象的异同。
+2. getPrototypeOf() 静态方法返回指定对象的原型。
+3. react-is  检查特定react元素。
+4. react，forwardRef  , createElement。
+
 # lil-gui
 
 ---
