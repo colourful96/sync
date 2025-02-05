@@ -800,6 +800,66 @@
 1. fs-extra  扩展fs系统的方法。
 2. @monaco-editor/react  代码编辑器。
 
+# 2025
+
+## 一月
+
+### 1-2
+
+1. ```javascript
+           if (event.key === 'Tab') {
+               event.preventDefault();
+               // 获取当前的文本框
+               const textarea = event.target as HTMLTextAreaElement;
+               if(textarea && textarea.tagName==='TEXTAREA'){
+                   // 获取光标位置
+                   const start = textarea.selectionStart;
+                   const end = textarea.selectionEnd;
+            
+                   // 设置新的值并移动光标
+                   textarea.value = textarea.value.substring(0, start)
+                       + '  ' // 插入Tab符，可能需要使用空格来代替
+                       + textarea.value.substring(end);
+            
+                   // 将光标移到Tab符之后
+                   textarea.selectionStart =
+                       textarea.selectionEnd = start + 1; // +1 或者根据你的制表符宽度设置
+               }
+               return false;
+           }
+   ```
+
+### 1-3
+
+1. macos 中执行 sh  test.sh。
+
+### 1-14
+
+1. 使用MutationObserver来监测DOM变化，从而知道某一个元素的子元素是否已经完全渲染完成。
+2. 根据数据下载json文件。
+
+### 1-15
+
+1. typescript中import type{} from ''；  [import和import type](https://juejin.cn/post/7111203210542448671)
+
+2. > 在 CSS 中，`font-weight` 属性用于设置字体的粗细。常用的数值及其对应的命名值如下：
+   >
+   > - `100` - Thin
+   > - `200` - Extra Light (Ultra Light)
+   > - `300` - Light
+   > - `400` - Normal (Regular)
+   > - `500` - Medium
+   > - `600` - Semi Bold (Demi Bold)
+   > - `700` - Bold
+   > - `800` - Extra Bold (Ultra Bold)
+   > - `900` - Black (Heavy)
+
+### 2-15
+
+1. 全局安装typescript后可以使用tsc命令编译ts文件，局部安装可使用npx tsc。
+2. Node.ownerDocument只读属性会返回当前节点的顶层的 document 对象。
+3. 在浏览器中，**`document.defaultView`** 返回与[文档](https://developer.mozilla.org/zh-CN/docs/Glossary/Browsing_context)关联的 [`window`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window) 对象，如果没有可用的对象，则返回 `null`。
+
 # lil-gui
 
 ---
