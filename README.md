@@ -854,11 +854,54 @@
    > - `800` - Extra Bold (Ultra Bold)
    > - `900` - Black (Heavy)
 
-### 2-15
+## 二月
+
+### 2-5
 
 1. 全局安装typescript后可以使用tsc命令编译ts文件，局部安装可使用npx tsc。
 2. Node.ownerDocument只读属性会返回当前节点的顶层的 document 对象。
 3. 在浏览器中，**`document.defaultView`** 返回与[文档](https://developer.mozilla.org/zh-CN/docs/Glossary/Browsing_context)关联的 [`window`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window) 对象，如果没有可用的对象，则返回 `null`。
+
+### 2-6
+
+1. **`Node.cloneNode()`** 方法返回调用该方法的节点的一个副本。
+
+2. `is` 关键字常用于自定义类型保护
+
+   ```javascript
+   export const isTextNode = (node: Node): node is Text => node.nodeType === Node.TEXT_NODE;
+   ```
+
+3. [影子DOM](https://zh.javascript.info/shadow-dom)
+
+### 2-7
+
+1. DOM结构中的节点包括元素节点、文本节点、注释节点。
+2. document.open()  document.write()  document.close()。
+3. document.adoptNode() **`Document.adoptNode()`** 将[节点（DOM）](https://developer.mozilla.org/zh-CN/docs/Glossary/Node/DOM)从另一个[文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)转移至调用该方法的文档中。被转移的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 [`ownerDocument`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/ownerDocument) 会变更为当前文档。然后节点将被插入到当前文档中。
+4. [doctype:DocumentType](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentType)
+5. document.readyState 描述了document的加载状态。
+
+### 2-8
+
+1. dispatchEvent() 调用一个Event事件。
+2. **`MouseEvent`** 接口指用户与指针设备（如鼠标）交互时发生的事件。
+3. [html2canvas实现浏览器截图的原理](https://juejin.cn/post/6908255717317148685)
+4. [你遇到过html2canvas的裁剪错误吗？这篇源码解析也许可以帮到你](https://juejin.cn/post/7078594967970512932?searchId=2025020811231521D5D35FF448ED4DF75E)
+
+### 2-10
+
+1. 按照文档配置好flow进行开发，在vs code中需要安装Flow Language Support" 插件，在项目根目录创建 .vscode/settings.json（如果还没有的话）添加以下配置：
+
+   ```json
+   {
+       "javascript.validate.enable": false,
+       "flow.enabled": true,
+       "flow.useNPMPackagedFlow": true
+   }
+   ```
+
+2. `npm publish`命令报错403，一般是名称重复。
 
 # lil-gui
 
