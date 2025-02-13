@@ -584,6 +584,8 @@
 
 1. picGo+github+typora 搭建免费图床。
 
+   自定义域名：https://cdn.jsdelivr.net/gh/colourful96/ImagePicGo@main/img
+
 ### 4-10
 
 1. Vue 的实例方法/生命周期。`vm.$nextTick([callback])`将回调延迟到下次 DOM 更新循环之后执行。
@@ -902,6 +904,14 @@
    ```
 
 2. `npm publish`命令报错403，一般是名称重复。
+
+### 2-11
+
+1. 使用jest编写测试用例，默认不支持esm，需要下载babel插件 @babel/preset-env babel-jest使用。
+
+### 2-13
+
+1. 通过FileReader()和ExcelJS实现前端验证文件内容是否正确。
 
 # lil-gui
 
