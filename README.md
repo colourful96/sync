@@ -912,6 +912,14 @@
 ### 2-13
 
 1. 通过FileReader()和ExcelJS实现前端验证文件内容是否正确。
+1. history  管理javascript路由。
+
+### 2-14
+
+1. *connected-react-router*：React-Router v4 v5 与Redux绑定。
+2. *invariant*: 在开发过程中提供描述性错误，生成环境中提供一般性错误。
+3. *<base href='/' />* : 指定用于一个文档中包含的所有相对 URL 的根 URL。
+4. *npm pack*: 生成.tgz包，本地测试包使用。
 
 # lil-gui
 
