@@ -921,6 +921,34 @@
 3. *<base href='/' />* : 指定用于一个文档中包含的所有相对 URL 的根 URL。
 4. *npm pack*: 生成.tgz包，本地测试包使用。
 
+### 2-18
+
+1. `connected-react-router` 是一个非常实用的库，它将 React Router 和 Redux 结合在一起。这允许你将路由信息存储在 Redux 中，从而可以更简单、更一致地管理应用的路由状态。
+2. @craco/craco  是一个用于扩展 `Create React App（CRA）`的工具。
+
+### 2-26
+
+1. rollup打包时，当有React的JSX元素时，文件名称需要是.jsx后缀，否则打包将会失败。
+1. 当浏览器安装redux扩展时会自动给window注入该方法。window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__  方便调试。
+
+## 三月
+
+### 3-7
+
+1. *reactive*响应式原理：创建一个代理对象，负责拦截和处理该对象的访问和修改操作。当解构时，会获的对象中的原始值，因而会失去响应性。可以使用*toRefs*方法将原始值转换为*ref*使其具有响应性。
+
+2. *beforeCreate*和*created*生命周期被*setup*替代。
+
+3. watchEffect 不需要手动传入依赖；watchEffect 会先执行一次用来自动收集依赖；watchEffect 无法获取到变化前的值， 只能获取变化后的值。
+
+4. `Suspense` 只是一个带插槽的组件，只是它的插槽指定了`default` 和 `fallback` 两种状态。
+
+5. `<template>`标签中可以写多个根节点。
+
+6. 直接解构`pinia`中的state时，state值将不再具有响应性。直接这样使用`store[name]`,或者使用`toRefs`转换。
+
+   
+
 # lil-gui
 
 ---
