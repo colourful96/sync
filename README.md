@@ -996,6 +996,30 @@
 
 1. 同源策略主要是限制`JavaScript`发起的请求（如XMLHttpRequest、Fetch），防止恶意脚本通过浏览器获取其他域的敏感数据，而表单 提交（<form>标签）是浏览器的原生行为，不受同源策略的影响，类似于`<script>`标签一样。
 
+## 七月
+
+### 7-30
+
+1. Vue中`defineComponent()`类型推导辅助函数。函数签名：和渲染函数`h()`或者`jsx`一起使用。
+
+2. `shallowRef()`是`ref`的浅层形式，只会对第一层的.value访问是响应式的。
+
+   ```javascript
+   const state = shallowRef({count:1})
+   // 不会触发
+   state.value.count = 2;
+   // 会触发\
+   state.value = {count:2}
+   ```
+
+3. `defineProps()`和`defineEmits()`对属性和方法获的完整的类型推导支持。`defineExpose()`暴露属性和方法给父组件。
+
+
+
+
+
+
+
 # lil-gui
 
 ---
