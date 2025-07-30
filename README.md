@@ -936,18 +936,65 @@
 ### 3-7
 
 1. *reactive*响应式原理：创建一个代理对象，负责拦截和处理该对象的访问和修改操作。当解构时，会获的对象中的原始值，因而会失去响应性。可以使用*toRefs*方法将原始值转换为*ref*使其具有响应性。
-
 2. *beforeCreate*和*created*生命周期被*setup*替代。
-
 3. watchEffect 不需要手动传入依赖；watchEffect 会先执行一次用来自动收集依赖；watchEffect 无法获取到变化前的值， 只能获取变化后的值。
-
 4. `Suspense` 只是一个带插槽的组件，只是它的插槽指定了`default` 和 `fallback` 两种状态。
-
 5. `<template>`标签中可以写多个根节点。
-
 6. 直接解构`pinia`中的state时，state值将不再具有响应性。直接这样使用`store[name]`,或者使用`toRefs`转换。
 
+
+### 3-11
+
+1. 普通的 `<script>` 只在组件被首次引入的时候执行一次不同，`<script setup>` 中的代码会在**每次组件实例被创建的时候执行**。`setup`是生命周期的一部分。
+2. [组合式函数](https://cn.vuejs.org/guide/reusability/composables.html)，可以在普通js组件（用use开头）中使用组合式API，组合式函数也可以互相引入复用，然后引入实现逻辑复用。类似自定义hook。
+3. 选项式API中使用`directives`注册自定义指令，组合式API中，任何以 `v` 开头的驼峰式命名的变量都可以当作自定义指令使用。`app.directive('',{})`注册全局指令。
+4. ***自定义指令***：只有当所需功能只能通过直接的 DOM 操作来实现时，才应该使用自定义指令。
+
+### 3-12
+
+1. tinymce 富文本编辑器
+
+2. > 引入react  react-dom react-router react-router-dom prop-types
+   >
+   > 图表和富文本引入相关js
+   >
+   > 引入渲染器re
+   >
+   > 引入打包的js文件（已经做过处理）  提前引入css文件
+   >
+   > 线上有代理，局部渲染需要本地代理
+   >
+   > schema: 页面 组件，组件树，参数，工具包
+
+### 3-17
+
+1. **`import.meta.env`** vite中暴露的环境变量。
+
+### 3-18
+
+1. 通过 [`app.component()`](https://cn.vuejs.org/api/application.html#app-component) 和 [`app.directive()`](https://cn.vuejs.org/api/application.html#app-directive) 注册一到多个全局组件或自定义指令。
+
+2. 通过 [`app.provide()`](https://cn.vuejs.org/api/application.html#app-provide) 使一个资源[可被注入](https://cn.vuejs.org/guide/components/provide-inject.html)进整个应用。
+
+3. 向 [`app.config.globalProperties`](https://cn.vuejs.org/api/application.html#app-config-globalproperties) 中添加一些全局实例属性或方法。
+
+4. app.use({install(app,options){}},{}) 注册插件。
+
+5. 依赖注入：**provide()**  **inject()**
+
+   ```vue
+   app.provide(key, value)
    
+   <script setup>
+   	import { reject } from 'vue'
+   	const key = reject(key)
+   </script>
+   ```
+
+
+### 3-24
+
+1. 同源策略主要是限制`JavaScript`发起的请求（如XMLHttpRequest、Fetch），防止恶意脚本通过浏览器获取其他域的敏感数据，而表单 提交（<form>标签）是浏览器的原生行为，不受同源策略的影响，类似于`<script>`标签一样。
 
 # lil-gui
 
